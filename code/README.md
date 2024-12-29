@@ -59,10 +59,7 @@ The covert channel capacity was measured using the following steps:
 3. The timer stopped after sending the last packet.
 4. The time difference (in seconds) was calculated.
 5. Capacity was calculated as:
-
-   \[
-   \text{Capacity} = \frac{128}{\text{Time (seconds)}}
-   \]
+   $$\text{Capacity} = \frac{128}{\text{Time (seconds)}}$$
 
 ### Results
 
