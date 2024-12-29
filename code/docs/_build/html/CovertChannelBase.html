@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CovertChannelBase module &mdash; Covert Channel 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="MyCovertChannel module" href="MyCovertChannel.html" />
+    <link rel="prev" title="Covert Channel" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Covert Channel
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Covert Channel</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">CovertChannelBase module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#CovertChannelBase.CovertChannelBase"><code class="docutils literal notranslate"><span class="pre">CovertChannelBase</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#CovertChannelBase.CovertChannelBase.convert_eight_bits_to_character"><code class="docutils literal notranslate"><span class="pre">CovertChannelBase.convert_eight_bits_to_character()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#CovertChannelBase.CovertChannelBase.convert_string_message_to_binary"><code class="docutils literal notranslate"><span class="pre">CovertChannelBase.convert_string_message_to_binary()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#CovertChannelBase.CovertChannelBase.generate_random_binary_message"><code class="docutils literal notranslate"><span class="pre">CovertChannelBase.generate_random_binary_message()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#CovertChannelBase.CovertChannelBase.generate_random_binary_message_with_logging"><code class="docutils literal notranslate"><span class="pre">CovertChannelBase.generate_random_binary_message_with_logging()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#CovertChannelBase.CovertChannelBase.generate_random_message"><code class="docutils literal notranslate"><span class="pre">CovertChannelBase.generate_random_message()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#CovertChannelBase.CovertChannelBase.log_message"><code class="docutils literal notranslate"><span class="pre">CovertChannelBase.log_message()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#CovertChannelBase.CovertChannelBase.send"><code class="docutils literal notranslate"><span class="pre">CovertChannelBase.send()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#CovertChannelBase.CovertChannelBase.sleep_random_time_ms"><code class="docutils literal notranslate"><span class="pre">CovertChannelBase.sleep_random_time_ms()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#source-code">Source Code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="MyCovertChannel.html">MyCovertChannel module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Covert Channel</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Covert Channel</a></li>
+      <li class="breadcrumb-item active">CovertChannelBase module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/CovertChannelBase.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-CovertChannelBase">
+<span id="covertchannelbase-module"></span><h1>CovertChannelBase module<a class="headerlink" href="#module-CovertChannelBase" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="CovertChannelBase.CovertChannelBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">CovertChannelBase.</span></span><span class="sig-name descname"><span class="pre">CovertChannelBase</span></span><a class="reference internal" href="_modules/CovertChannelBase.html#CovertChannelBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#CovertChannelBase.CovertChannelBase" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<ul class="simple">
+<li><p>You must inherit the CovertChannelBase class in your implementation.</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="CovertChannelBase.CovertChannelBase.convert_eight_bits_to_character">
+<span class="sig-name descname"><span class="pre">convert_eight_bits_to_character</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eight_bits</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/CovertChannelBase.html#CovertChannelBase.convert_eight_bits_to_character"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#CovertChannelBase.CovertChannelBase.convert_eight_bits_to_character" title="Link to this definition"></a></dt>
+<dd><ul class="simple">
+<li><p>It can be used to convert the received eight bits to a character in the receiving operation.</p></li>
+<li><p>Takes eight bits as a string, converts and returns.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CovertChannelBase.CovertChannelBase.convert_string_message_to_binary">
+<span class="sig-name descname"><span class="pre">convert_string_message_to_binary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/CovertChannelBase.html#CovertChannelBase.convert_string_message_to_binary"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#CovertChannelBase.CovertChannelBase.convert_string_message_to_binary" title="Link to this definition"></a></dt>
+<dd><ul class="simple">
+<li><p>Converts the incoming string value to binary format.</p></li>
+<li><p>You do not have to use it directly; instead, you can use generate_random_binary_message or generate_random_binary_message_with_logging functions.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CovertChannelBase.CovertChannelBase.generate_random_binary_message">
+<span class="sig-name descname"><span class="pre">generate_random_binary_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/CovertChannelBase.html#CovertChannelBase.generate_random_binary_message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#CovertChannelBase.CovertChannelBase.generate_random_binary_message" title="Link to this definition"></a></dt>
+<dd><ul class="simple">
+<li><p>It generates a random string whose length is between the min_length and max_length, and converts it to binary format.</p></li>
+<li><p>“.” is the stopping character for the covert channel communication, so that it adds “.” at the of the generated string without ruining the length restrictions.</p></li>
+<li><p>You must use this function to generate the message in binary format that will be transferred with covert channel communication.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CovertChannelBase.CovertChannelBase.generate_random_binary_message_with_logging">
+<span class="sig-name descname"><span class="pre">generate_random_binary_message_with_logging</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/CovertChannelBase.html#CovertChannelBase.generate_random_binary_message_with_logging"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#CovertChannelBase.CovertChannelBase.generate_random_binary_message_with_logging" title="Link to this definition"></a></dt>
+<dd><ul class="simple">
+<li><p>Same as generate_random_binary_message() function with logging option.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CovertChannelBase.CovertChannelBase.generate_random_message">
+<span class="sig-name descname"><span class="pre">generate_random_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/CovertChannelBase.html#CovertChannelBase.generate_random_message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#CovertChannelBase.CovertChannelBase.generate_random_message" title="Link to this definition"></a></dt>
+<dd><ul class="simple">
+<li><p>You can use this function if you want to create a random string, e.g. for the payload of the packet.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CovertChannelBase.CovertChannelBase.log_message">
+<span class="sig-name descname"><span class="pre">log_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_file_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/CovertChannelBase.html#CovertChannelBase.log_message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#CovertChannelBase.CovertChannelBase.log_message" title="Link to this definition"></a></dt>
+<dd><ul class="simple">
+<li><p>You can use this function to log the received message and it is not a must, you can write your own.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CovertChannelBase.CovertChannelBase.send">
+<span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">packet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'eth0'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/CovertChannelBase.html#CovertChannelBase.send"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#CovertChannelBase.CovertChannelBase.send" title="Link to this definition"></a></dt>
+<dd><ul class="simple">
+<li><p>You must send each packet by using this function.</p></li>
+<li><p>Call this function with the packet and sender’s interface (Default interface is “eth0” and you do not have to set unless there is a specific purpose.)</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="CovertChannelBase.CovertChannelBase.sleep_random_time_ms">
+<span class="sig-name descname"><span class="pre">sleep_random_time_ms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/CovertChannelBase.html#CovertChannelBase.sleep_random_time_ms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#CovertChannelBase.CovertChannelBase.sleep_random_time_ms" title="Link to this definition"></a></dt>
+<dd><ul class="simple">
+<li><p>For the covert timing channels, you can use this function if you want to wait random time in miliseconds between start and end.</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<section id="source-code">
+<h2>Source Code<a class="headerlink" href="#source-code" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">string</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">time</span>
+<span class="linenos"> 3</span><span class="kn">import</span> <span class="nn">random</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">scapy.all</span> <span class="kn">import</span> <span class="n">send</span><span class="p">,</span> <span class="n">sendp</span><span class="p">,</span> <span class="n">ARP</span><span class="p">,</span> <span class="n">LLC</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="c1"># You are not allowed to change CovertChannelBase class, please make your implementation in the MyCovertChannel class.</span>
+<span class="linenos"> 7</span><span class="k">class</span> <span class="nc">CovertChannelBase</span><span class="p">:</span>
+<span class="linenos"> 8</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos"> 9</span><span class="sd">    - You must inherit the CovertChannelBase class in your implementation.</span>
+<span class="linenos">10</span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos">11</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">12</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">13</span><span class="sd">        - Empty init</span>
+<span class="linenos">14</span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos">15</span>        <span class="k">pass</span>
+<span class="linenos">16</span>    <span class="k">def</span> <span class="nf">send</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">packet</span><span class="p">,</span> <span class="n">interface</span><span class="o">=</span><span class="s2">&quot;eth0&quot;</span><span class="p">):</span>
+<span class="linenos">17</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">18</span><span class="sd">        - You must send each packet by using this function.</span>
+<span class="linenos">19</span><span class="sd">        - Call this function with the packet and sender&#39;s interface (Default interface is &quot;eth0&quot; and you do not have to set unless there is a specific purpose.)</span>
+<span class="linenos">20</span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos">21</span>        <span class="k">if</span> <span class="n">packet</span><span class="o">.</span><span class="n">haslayer</span><span class="p">(</span><span class="n">ARP</span><span class="p">)</span> <span class="ow">or</span> <span class="n">packet</span><span class="o">.</span><span class="n">haslayer</span><span class="p">(</span><span class="n">LLC</span><span class="p">):</span>
+<span class="linenos">22</span>            <span class="n">sendp</span><span class="p">(</span><span class="n">packet</span><span class="p">,</span> <span class="n">iface</span><span class="o">=</span><span class="n">interface</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos">23</span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos">24</span>            <span class="n">send</span><span class="p">(</span><span class="n">packet</span><span class="p">,</span> <span class="n">iface</span><span class="o">=</span><span class="n">interface</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="linenos">25</span>    <span class="k">def</span> <span class="nf">log_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="n">log_file_name</span><span class="p">):</span>
+<span class="linenos">26</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">27</span><span class="sd">        - You can use this function to log the received message and it is not a must, you can write your own.</span>
+<span class="linenos">28</span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos">29</span>        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">log_file_name</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">my_file</span><span class="p">:</span>
+<span class="linenos">30</span>            <span class="n">my_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="linenos">31</span>    <span class="k">def</span> <span class="nf">convert_string_message_to_binary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+<span class="linenos">32</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">33</span><span class="sd">        - Converts the incoming string value to binary format.</span>
+<span class="linenos">34</span><span class="sd">        - You do not have to use it directly; instead, you can use generate_random_binary_message or generate_random_binary_message_with_logging functions.</span>
+<span class="linenos">35</span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos">36</span>        <span class="n">binary_message_to_transfer</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;08b&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+<span class="linenos">37</span>        <span class="k">return</span> <span class="n">binary_message_to_transfer</span>
+<span class="linenos">38</span>    <span class="k">def</span> <span class="nf">generate_random_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="linenos">39</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">40</span><span class="sd">        - You can use this function if you want to create a random string, e.g. for the payload of the packet.</span>
+<span class="linenos">41</span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos">42</span>        <span class="k">assert</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">min_length</span><span class="p">,</span> <span class="s2">&quot;min_length must be bigger than 0&quot;</span>
+<span class="linenos">43</span>        <span class="k">assert</span> <span class="n">min_length</span> <span class="o">&lt;=</span> <span class="n">max_length</span><span class="p">,</span> <span class="s2">&quot;min_length must be smaller than or equal to the max_length&quot;</span>
+<span class="linenos">44</span>        <span class="n">letters_digits</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_letters</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span>
+<span class="linenos">45</span>        <span class="n">punctuation</span> <span class="o">=</span> <span class="s1">&#39;,?!&#39;</span>
+<span class="linenos">46</span>        <span class="n">all_chars</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="mi">50</span> <span class="o">+</span> <span class="n">letters_digits</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="n">punctuation</span>
+<span class="linenos">47</span>        <span class="n">length</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">min_length</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_length</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">48</span>        <span class="n">random_string</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">all_chars</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">))</span>
+<span class="linenos">49</span>        <span class="n">random_string</span> <span class="o">+=</span> <span class="s2">&quot;.&quot;</span>
+<span class="linenos">50</span>        <span class="k">return</span> <span class="n">random_string</span>
+<span class="linenos">51</span>    <span class="k">def</span> <span class="nf">generate_random_binary_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<span class="linenos">52</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">53</span><span class="sd">        - It generates a random string whose length is between the min_length and max_length, and converts it to binary format.</span>
+<span class="linenos">54</span><span class="sd">        - &quot;.&quot; is the stopping character for the covert channel communication, so that it adds &quot;.&quot; at the of the generated string without ruining the length restrictions.</span>
+<span class="linenos">55</span><span class="sd">        - You must use this function to generate the message in binary format that will be transferred with covert channel communication.</span>
+<span class="linenos">56</span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos">57</span>        <span class="n">random_message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_random_message</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="n">min_length</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="n">max_length</span><span class="p">)</span>
+<span class="linenos">58</span>        <span class="n">random_binary_message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_string_message_to_binary</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">random_message</span><span class="p">)</span>
+<span class="linenos">59</span>        <span class="k">return</span> <span class="n">random_binary_message</span>
+<span class="linenos">60</span>    <span class="k">def</span> <span class="nf">generate_random_binary_message_with_logging</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log_file_name</span><span class="p">,</span> <span class="n">min_length</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">):</span>
+<span class="linenos">61</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">62</span><span class="sd">        - Same as generate_random_binary_message() function with logging option.</span>
+<span class="linenos">63</span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos">64</span>        <span class="n">random_message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_random_message</span><span class="p">(</span><span class="n">min_length</span><span class="o">=</span><span class="n">min_length</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="n">max_length</span><span class="p">)</span>
+<span class="linenos">65</span>        <span class="n">random_binary_message</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_string_message_to_binary</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">random_message</span><span class="p">)</span>
+<span class="linenos">66</span>        <span class="bp">self</span><span class="o">.</span><span class="n">log_message</span><span class="p">(</span><span class="n">message</span><span class="o">=</span><span class="n">random_message</span><span class="p">,</span> <span class="n">log_file_name</span><span class="o">=</span><span class="n">log_file_name</span><span class="p">)</span>
+<span class="linenos">67</span>        <span class="k">return</span> <span class="n">random_binary_message</span>
+<span class="linenos">68</span>    <span class="k">def</span> <span class="nf">sleep_random_time_ms</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
+<span class="linenos">69</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">70</span><span class="sd">        - For the covert timing channels, you can use this function if you want to wait random time in miliseconds between start and end.</span>
+<span class="linenos">71</span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos">72</span>        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="linenos">73</span>    <span class="k">def</span> <span class="nf">convert_eight_bits_to_character</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eight_bits</span><span class="p">):</span>
+<span class="linenos">74</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos">75</span><span class="sd">        - It can be used to convert the received eight bits to a character in the receiving operation.</span>
+<span class="linenos">76</span><span class="sd">        - Takes eight bits as a string, converts and returns.</span>
+<span class="linenos">77</span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos">78</span>        <span class="k">return</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">eight_bits</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="Covert Channel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="MyCovertChannel.html" class="btn btn-neutral float-right" title="MyCovertChannel module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, METU - Computer Engineering Department.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
